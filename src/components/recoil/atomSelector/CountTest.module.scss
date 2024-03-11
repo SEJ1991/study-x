@@ -1,0 +1,17 @@
+.base {
+  width: auto;
+  height: auto;
+}
+
+.wrapper {
+  display: flex;
+  column-gap: 0.8rem;
+}
+
+.button {
+  width: auto;
+  height: auto;
+  padding: 0.2rem 0.5rem;
+  border: 0.1rem solid black;
+  border-radius: 0.8rem;
+}

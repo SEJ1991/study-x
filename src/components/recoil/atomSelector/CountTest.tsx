@@ -1,6 +1,9 @@
-import { useRecoilState, useRecoilValue, useSetRecoilState } from "recoil";
+import { useRecoilState, useRecoilValue, useSetRecoilState } from 'recoil';
 
-import { countState } from "atoms/basicTest";
+import { countState } from 'atoms/basicTest';
+import styles from './CountTest.module.scss';
+
+const { base, wrapper, button } = styles;
 
 /**
  * @description 읽기전용인 useRecoilValue를 사용하여 atom의 상태를 읽습니다. 보통 값을 읽을 필요만 있을 때 사용합니다.
@@ -19,33 +22,43 @@ function WriteOnlyTest() {
   const setCount = useSetRecoilState(countState);
 
   const handleSetCount = (number: number) => {
-    setCount((prev) => prev + number);
+    setCount(prev => prev + number);
   };
 
   return (
     <>
-      <button onClick={() => handleSetCount(1)}>증가</button>
-      <button onClick={() => handleSetCount(-1)}>감소</button>
+      <button className={button} onClick={() => handleSetCount(1)}>
+        증가
+      </button>
+      <button className={button} onClick={() => handleSetCount(-1)}>
+        감소
+      </button>
     </>
   );
 }
 
 /**
  * count atom test 컴포넌트
- * @description useRecoliState는 key와 set함수를 사용합니다. 따라서 읽고 쓰기가 필요할 때 사용합니다.
+ * @description useRecoliState는 key와 set함수를 사용합니다. 따라서 읽고 쓰기가 필요할 때 사용합니다. 두번째
  */
 export default function CountTest() {
   const [count, setCount] = useRecoilState(countState);
 
   const handleSetCount = (number: number) => {
-    setCount((prev) => prev + number);
+    setCount(prev => prev + number);
   };
 
   return (
-    <div>
+    <div className={base}>
       <h4>COUNT: {count}</h4>
-      <button onClick={() => handleSetCount(1)}>증가</button>
-      <button onClick={() => handleSetCount(-1)}>감소</button>
+      <div className={wrapper}>
+        <button className={button} onClick={() => handleSetCount(1)}>
+          증가
+        </button>
+        <button className={button} onClick={() => handleSetCount(-1)}>
+          감소
+        </button>
+      </div>
       {/* <ReadOnlyTest />
       <WriteOnlyTest /> */}
     </div>

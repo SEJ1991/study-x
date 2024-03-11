@@ -1,4 +1,4 @@
-import styles from "./ListFrame.module.scss";
+import styles from './ListFrame.module.scss';
 
 const { base, h3, ul, li } = styles;
 
@@ -12,7 +12,7 @@ export default function ListFrame({ title, list }: Props) {
     <div className={base}>
       <h3 className={h3}>{title}</h3>
       <ul className={ul}>
-        {list.map((value) => (
+        {list.map(value => (
           <li key={value} className={li}>
             {value}
           </li>

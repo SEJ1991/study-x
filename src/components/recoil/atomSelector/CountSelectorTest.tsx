@@ -1,7 +1,7 @@
-import { useEffect } from "react";
-import { useRecoilState, useRecoilValue } from "recoil";
+import { useEffect } from 'react';
+import { useRecoilState, useRecoilValue } from 'recoil';
 
-import { doubleCountSelector, dummyCountState } from "atoms/basicTest";
+import { doubleCountSelector, dummyCountState } from 'atoms/basicTest';
 
 /**
  * selector 의 set으로 인해 값이 변경된 atom을 나타내는 컴포넌트.
@@ -27,9 +27,7 @@ export default function CountSelectorTest() {
   return (
     <div>
       DOUBLE SELECTOR: {doubleSelector}
-      <div>
-        <DummyCountTest />
-      </div>
+      {/* <div><DummyCountTest /></div> */}
     </div>
   );
 }
