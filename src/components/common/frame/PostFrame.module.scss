@@ -1,0 +1,11 @@
+.base {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2.3rem;
+  width: 100%;
+  height: auto;
+
+  & > h2 {
+    margin: 2rem 0;
+  }
+}

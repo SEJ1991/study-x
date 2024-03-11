@@ -1,0 +1,26 @@
+.base {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  width: auto;
+  height: auto;
+}
+
+.h3 {
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+
+.ul {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.8rem;
+  width: auto;
+  height: auto;
+}
+
+.li {
+  font-size: 2rem;
+  margin-left: 2rem;
+  list-style: square;
+}

@@ -6,6 +6,7 @@ import "styles/global.css";
 import App from "App.tsx";
 import IndexPage from "pages/IndexPage";
 import RecoilPage from "pages/RecoilPage.tsx";
+import { RecoilRoot } from "recoil";
 
 const router = createBrowserRouter([
   {
@@ -27,8 +28,10 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <RouterProvider router={router}>
-      <App />
-    </RouterProvider>
+    <RecoilRoot>
+      <RouterProvider router={router}>
+        <App />
+      </RouterProvider>
+    </RecoilRoot>
   </React.StrictMode>
 );

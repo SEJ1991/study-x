@@ -1,0 +1,12 @@
+.base {
+  width: auto;
+  height: auto;
+  padding: 0.4rem 0.8rem;
+  border: 0.2rem solid black;
+  border-radius: 0.8rem;
+  font-size: 3rem;
+
+  &:disabled {
+    opacity: 0.3;
+  }
+}
